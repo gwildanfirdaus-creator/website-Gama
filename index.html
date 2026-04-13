@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Saya</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: black;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            width: 80%;
+            border-radius: 15px;
+
+            /* animasi */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: muncul 1s ease forwards;
+            transition: 0.3s;
+        }
+
+        @keyframes muncul {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: darkblue;
+            transform: scale(1.1);
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        /* DARK MODE */
+        .dark {
+            background-color: #121212;
+            color: white;
+        }
+
+        .dark .card {
+            background-color: #1e1e1e;
+        }
+
+        .dark button {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+</div>
+
+<div class="container">
+    <div class="card">
+
+        <img src="https://picsum.photos/200">
+
+        <h1>Nama Kamu</h1>
+        <p>Saya suka bermain badminton, gaming, dan belajar coding 🔥</p>
+
+        <button onclick="halo()">Kenalan Yuk</button>
+
+        <br><br>
+
+        <div class="social">
+            <a href="https://wa.me/6285706405497">
+                <button>WhatsApp</button>
+            </a>
+
+            <a href="https://instagram.com/idcbruh013">
+                <button>Instagram</button>
+            </a>
+        </div>
+
+        <br><br>
+
+        <button onclick="darkMode()">🌙 Dark Mode</button>
+
+    </div>
+</div>
+
+<script>
+function halo() {
+    alert("Halo! Senang kenal kamu 😄");
+}
+
+function darkMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
